@@ -1,28 +1,24 @@
 package org.entdes.javafx;
 
-import java.util.Scanner;
-
-public class EscriuEnUnArray4 {
+public class EscriuEnUnArray4vIO {
     static void main() {
-        Scanner ent = new Scanner(System.in);
-
-        int[] vector = new int[5];
+        int[] vector = new int[Integer.parseInt(IO.readln())];
         int inc;
+
+        String[] numsSeparats = IO.readln().split(" ");
 
         //Llegim els valors de l'array i l'anem omplint
         for (int i = 0; i < vector.length; i++) {
-            vector[i] = ent.nextInt();
+            vector[i] = Integer.parseInt(numsSeparats[i]);
         }
 
         //Llegim l'increment a aplicar als elements del vector
-        inc = ent.nextInt();
+        inc = Integer.parseInt(IO.readln());
 
         //Mostrem els valors de l'array incrementats adequadament
         for (int i = 0; i < vector.length; i++) {
             IO.print(String.format("%d ", vector[i]+inc));
         }
-
         IO.println();
-
     }
 }
